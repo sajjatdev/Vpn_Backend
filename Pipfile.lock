@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "55ec466f3bd745a04e7a2a550c73ac3294522110bc3d86baffbcd6333df5f7c5"
+            "sha256": "1ae9bb87693b4cef06707c547fcf1b7d4b5660afa7023d48446d28aa280ec8f3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,21 @@
             "index": "pypi",
             "version": "==4.1"
         },
+        "django-admin-volt": {
+            "hashes": [
+                "sha256:051f8412ffe920f5bd7db9879860c51089bc46367d94803312334485d43a5da6"
+            ],
+            "index": "pypi",
+            "version": "==0.0.5"
+        },
+        "django-adminlte-3": {
+            "hashes": [
+                "sha256:a8f81b2b01bf1ac498c19a86ef40ea05517f90944d961bdf57d00eec739c4c2c",
+                "sha256:e81ac781da5111eced73ce30f04f95d5f2d0cf19ee226b1e1f92e2646a894aa0"
+            ],
+            "index": "pypi",
+            "version": "==0.1.6"
+        },
         "djangorestframework": {
             "hashes": [
                 "sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee",
@@ -46,6 +61,13 @@
             ],
             "index": "pypi",
             "version": "==3.13.1"
+        },
+        "fontawesomefree": {
+            "hashes": [
+                "sha256:a76ff830e43cf3a8bdc9249a3570f02047696c6bdf118899221a340f238d87b4"
+            ],
+            "index": "pypi",
+            "version": "==6.2.0"
         },
         "pymysql": {
             "hashes": [

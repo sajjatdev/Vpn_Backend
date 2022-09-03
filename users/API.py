@@ -14,4 +14,4 @@ class UsersSerializer(serializers.ModelSerializer):
                membership=MembershipSerializer
                class Meta:
                  model=Customer
-                 fields=['username','password','is_active','membership',"start_date","membershipday",'duration']
+                 fields=['username','password','is_active','membership',"start_date","Expire_Date",'duration']

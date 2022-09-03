@@ -33,7 +33,7 @@ class Customer(models.Model):
                               managed = True
                         
                @property
-               def membershipday(self):
+               def Expire_Date(self):
                               currentDate=date.today()
                               ex_datestr=str(datetime.strptime(str(self.duration),'%Y-%m-%d').date()-currentDate).split(' ',1)[0]
                               
@@ -41,4 +41,4 @@ class Customer(models.Model):
                                      instance= Customer.objects.filter(pk=self.id).update(is_active="INACTIVE")    
                                      instance.save()        
                                      return "you Need to Renew"              
-                              return ex_datestr 
+                              return ex_datestr+" Days"
