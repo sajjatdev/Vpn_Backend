@@ -22,6 +22,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+   "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fontawesomefree',
     'rest_framework',
-    'users',
+    'Customer',
     
 ]
 
@@ -74,7 +75,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vpn_admin',
+        'NAME': 'vpn',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
@@ -115,13 +116,33 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-if DEBUG:
-        STATICFILES_DIRS = [
-            os.path.join(BASE_DIR, 'static')
-       ]
-else:
-        STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+REST_FRAMEWORK = {
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
+}
+
+
+
+JAZZMIN_SETTINGS={  
+    "site_header":"VPN Admin",
+     "site_brand": "VPN Admin",
+    "site_title":"VPN Admin",
+     "welcome_sign": "Welcome to the VPN Admin Panel",
+      "copyright": "VPN Library Ltd",
+       "navigation_expanded": True,
+        "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "customer.membership":"fas fa-address-card",
+        "customer.customer":"fas fa-users",
+
+    },
+    "theme": "flatly",
+    "dark_mode_theme": "darkly",
+    "search_model": "customer.customer",
+}
+  

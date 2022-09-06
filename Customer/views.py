@@ -5,7 +5,7 @@ from django.db.models import Q
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.views import APIView
+from rest_framework import pagination 
 from .API import UsersSerializer
 from .models import Customer,Membership
 
@@ -14,8 +14,9 @@ from .models import Customer,Membership
 
 
 class UsersViewSet(ModelViewSet):
-               http_method_names=['post','get','delete','patch']
+          
                serializer_class=UsersSerializer
+               pagination_class=pagination.PageNumberPagination
                def get_queryset(self):
 
                        return Customer.objects.all()
@@ -24,7 +25,6 @@ class UsersViewSet(ModelViewSet):
                def create(self, request, *args, **kwargs):
                        user_date=request.data
                        validator=Customer.objects.filter(Q(username=user_date["username"])).all()
-                     
                        if not validator :
                               duration_count=Membership.objects.get(pk=user_date['membership'])
                               print(duration_count.name)

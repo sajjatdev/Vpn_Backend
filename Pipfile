@@ -8,9 +8,8 @@ django = "*"
 djangorestframework = "*"
 pymysql = "*"
 dj-rest-auth = "*"
-django-admin-volt = "*"
-django-adminlte-3 = "*"
 fontawesomefree = "*"
+django-jazzmin = "*"
 
 [dev-packages]
 
