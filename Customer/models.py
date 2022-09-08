@@ -17,7 +17,6 @@ class Membership(models.Model):
                              
 class Reseller(models.Model):
        STATUS=[("Inactive","Inactive"),("Active","Active")]
-       
        uid=models.UUIDField(primary_key=True,default=uuid4,unique=True)
        credit=models.PositiveIntegerField()
        isadmin=models.BooleanField(default=True)
