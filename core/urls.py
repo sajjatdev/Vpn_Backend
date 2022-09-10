@@ -6,8 +6,8 @@ from Customer   import views  as customerview
 
 route=DefaultRouter()
 route.register('customer',customerview.UsersViewSet,basename="userview")
-route.register("reseller",customerview.ReSellerViewSet,basename="reseller")
 route.register("Membership",customerview.MembershipViewSet,basename='membership')
+route.register("reseller",customerview.ReSellerViewSet,basename="reseller"),
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(route.urls))

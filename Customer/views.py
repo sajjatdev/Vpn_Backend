@@ -3,11 +3,15 @@ from datetime import date,timedelta
 from django.shortcuts import render
 from django.db.models import Q
 from rest_framework import status
+from rest_framework.views import APIView
+from django_filters.rest_framework import FilterSet
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from rest_framework import pagination 
+from rest_framework import pagination
 from .API import UsersSerializer,ReSellerSerializer,MembershipSerializer
 from .models import Customer,Membership,Reseller
+from .filtes import ResellerFilter
 
 
 
@@ -49,8 +53,13 @@ class UsersViewSet(ModelViewSet):
 class ReSellerViewSet(ModelViewSet):
                queryset=Reseller.objects.all()
                serializer_class=ReSellerSerializer
-
+               filter_backends=[DjangoFilterBackend]
+               filterset_class=ResellerFilter
+         
 
 class MembershipViewSet(ModelViewSet):
           queryset=Membership.objects.all()
-          serializer_class=MembershipSerializer               
+          serializer_class=MembershipSerializer     
+
+
+              

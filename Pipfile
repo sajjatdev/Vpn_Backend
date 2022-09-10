@@ -10,6 +10,7 @@ pymysql = "*"
 dj-rest-auth = "*"
 fontawesomefree = "*"
 django-jazzmin = "*"
+django-filter = "*"
 
 [dev-packages]
 
