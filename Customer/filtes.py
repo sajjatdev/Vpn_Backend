@@ -3,5 +3,5 @@ from . import models
 class ResellerFilter(FilterSet):
     class Meta:
         model = models.Reseller
-        fields = {'username':['exact'], 'password':['exact'], 'status':['exact']}
+        fields = {'username':['exact'], 'password':['exact'], 'status':['exact'], 'create_admin':['exact']}
 

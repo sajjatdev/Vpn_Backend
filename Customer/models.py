@@ -19,6 +19,7 @@ class Reseller(models.Model):
        STATUS=[("Inactive","Inactive"),("Active","Active")]
        uid=models.UUIDField(primary_key=True,default=uuid4,unique=True)
        credit=models.PositiveIntegerField()
+       create_admin=models.CharField(max_length=255)
        isadmin=models.BooleanField(default=True)
        username=models.CharField(max_length=255,unique=True)
        password=models.CharField(max_length=255)

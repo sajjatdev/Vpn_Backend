@@ -34,4 +34,4 @@ class ReSellerSerializer(serializers.ModelSerializer):
          uid=serializers.UUIDField(read_only=True)
          class Meta:
             model=Reseller
-            fields=['uid','username','password','status',"create_at","isadmin","status",'credit']
+            fields=['uid','username','password',"create_admin",'status',"create_at","isadmin","status",'credit']
