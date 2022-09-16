@@ -14,7 +14,11 @@ class Membership(models.Model):
                class Meta:
                               db_table = 'membership'
                               managed = True
-                             
+
+
+       
+
+
 class Reseller(models.Model):
        STATUS=[("Inactive","Inactive"),("Active","Active")]
        uid=models.UUIDField(primary_key=True,default=uuid4,unique=True)
@@ -32,11 +36,20 @@ class Reseller(models.Model):
               managed = True
               verbose_name = 'Reseller'
               verbose_name_plural = 'Resellers'
+       
 
 
 
+class ResellerOnlineStatus (models.Model):
+       reseller=models.OneToOneField(Reseller,primary_key=True,unique=True,on_delete=models.CASCADE,related_name='resellerstatus')
+       status=models.BooleanField(default=False)
+       class Meta:
+                              db_table = 'Reseller_Status'
+                              managed = True
 
 
+
+                              
 class Customer(models.Model):
                IS_ACTIVE=[("ACTIVE",'Active'),("INACTIVE","Inactive")]
                reseller=models.ForeignKey(Reseller,on_delete=models.CASCADE,related_name="reseller")

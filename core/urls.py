@@ -8,6 +8,7 @@ route=DefaultRouter()
 route.register('customer',customerview.UsersViewSet,basename="userview")
 route.register("Membership",customerview.MembershipViewSet,basename='membership')
 route.register("reseller",customerview.ReSellerViewSet,basename="reseller"),
+route.register("resellerupdate",customerview.SellerStatusViewSet,basename='resellerUpdate')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(route.urls))

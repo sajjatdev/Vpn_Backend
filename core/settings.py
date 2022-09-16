@@ -7,7 +7,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 SECRET_KEY = 'django-insecure-#1)wibpu-7(w3q+)zknoi7csdf$$y&z*)tukvoj)12r+8vn=5l'
 
 DEBUG = True
@@ -28,7 +27,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'Customer',
 
-    
+
 ]
 
 MIDDLEWARE = [
@@ -55,16 +54,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-            'libraries' : {
-                'staticfiles': 'django.templatetags.static', 
+            'libraries': {
+                'staticfiles': 'django.templatetags.static',
             }
         },
     },
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
-
-
 
 
 DATABASES = {
@@ -106,12 +103,10 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-
+APPEND_SLASH = False
 
 REST_FRAMEWORK = {
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 100
 }
-
-  
