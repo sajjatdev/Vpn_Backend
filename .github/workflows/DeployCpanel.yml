@@ -9,9 +9,9 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        host: zainksa.xyz
+        user: admin_vpn@zainksa.xyz
+        password: 0K-b()cQIwQQ
         localDir: "dist"
         remoteDir: "www"
         options: "--delete --asci"
