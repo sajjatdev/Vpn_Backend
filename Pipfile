@@ -11,6 +11,7 @@ dj-rest-auth = "*"
 fontawesomefree = "*"
 django-jazzmin = "*"
 django-filter = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
