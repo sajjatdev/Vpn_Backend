@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: vpn.vipnet5g.host
-        username: ${{ secrets.FTP_USERNAME }}
+        server: ftp.zainksa.xyz
+        username: vpn_admin@vpn.vipnet5g.host
         password: ${{ secrets.FTP_PASSWORD }}
