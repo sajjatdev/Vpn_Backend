@@ -9,9 +9,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-#1)wibpu-7(w3q+)zknoi7csdf$$y&z*)tukvoj)12r+8vn=5l'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['vpnadmin.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
