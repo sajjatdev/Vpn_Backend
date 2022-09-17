@@ -1,28 +1,16 @@
-name: Publish Website
-
 on: push
-
+name: Deploy website on push
 jobs:
-  Fast-FTP-Action:
-    name: Fast FTP Action
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Fast FTP Action
-      uses: anvil-solutions/Fast-FTP-Action@2.1.0
+    - name: Get latest code
+      uses: actions/checkout@v2
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: ftp.zainksa.xyz
-        port: 21
         username: vpn@vpn.vipnet5g.host
-        password: ${{ secrets.FTP_PASSWORD }}
-        
-        
-
-
-
-
-
-        
-   
+        password: ${{ secrets.ftp_password }}
