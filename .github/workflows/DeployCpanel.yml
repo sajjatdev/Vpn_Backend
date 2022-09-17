@@ -9,9 +9,9 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: zainksa.xyz
-        user: admin_vpn@zainksa.xyz
-        password: 0K-b()cQIwQQ
+        host: vpn.vipnet5g.host
+        user: vpn_admin@vpn.vipnet5g.host
+        password: YIC~mp9PA_1p
         localDir: "dist"
         remoteDir: "www"
         options: "--delete --asci"
