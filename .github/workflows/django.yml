@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: ftp.zainksa.xyz
-        username: vpn_admin@vpn.vipnet5g.host
-        password: ${{ secrets.FTP_PASSWORD }}
+        username: vpn@vpn.vipnet5g.host
+        password: 6@i%FkMM.&A=
